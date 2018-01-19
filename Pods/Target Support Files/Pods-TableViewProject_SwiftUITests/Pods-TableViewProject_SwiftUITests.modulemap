@@ -1,0 +1,6 @@
+framework module Pods_TableViewProject_SwiftUITests {
+  umbrella header "Pods-TableViewProject_SwiftUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
