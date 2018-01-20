@@ -14,7 +14,7 @@ import Foundation
 class RequestData {
 	//request weather data and return value with handler(dictionary)
 	//@escaping indicates that we will escape the functions when handler is called
-	func weatherData(handler: @escaping (_ weather_data: Dictionary<String, AnyObject>?)-> Void) -> Void {
+	func BeginRequest(handler: @escaping (_ weather_data: Dictionary<String, AnyObject>?)-> Void) -> Void {
 		//let params = ["username":"john", "password":"123456"] as Dictionary<String, String>
 		
 //		var request = URLRequest(url: URL(string: "http://api.openweathermap.org/data/2.5/weather?q=London&appid=3ad67e7b46c13485e2d3d796d7d7cbd6")!)

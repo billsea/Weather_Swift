@@ -118,17 +118,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A9CF68A82010C711005F5642 /* API */ = {
+		A9CF68A82010C711005F5642 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				A9A8F400200E5A8900721133 /* Request.swift */,
 			);
-			path = API;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		A9CF68A92010C727005F5642 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A994F620200D5EBA007B7600 /* customCell.xib */,
+				A9E04BC0200819DA00B4A361 /* LaunchScreen.storyboard */,
+				A9E04BBB200819DA00B4A361 /* Main.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,10 +180,7 @@
 				A9CF68AB2010C75A005F5642 /* View */,
 				A9CF68AA2010C745005F5642 /* Controller */,
 				A9CF68A92010C727005F5642 /* UI */,
-				A994F620200D5EBA007B7600 /* customCell.xib */,
-				A9E04BC0200819DA00B4A361 /* LaunchScreen.storyboard */,
-				A9E04BBB200819DA00B4A361 /* Main.storyboard */,
-				A9CF68A82010C711005F5642 /* API */,
+				A9CF68A82010C711005F5642 /* Services */,
 				A9A8F3FD200E582500721133 /* Model */,
 				A9E04BB7200819DA00B4A361 /* AppDelegate.swift */,
 				A9E04BBE200819DA00B4A361 /* Assets.xcassets */,

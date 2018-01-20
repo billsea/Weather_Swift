@@ -45,15 +45,12 @@ class ResultsTableViewController: UITableViewController {
 		tableView.register(UINib(nibName: "customCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
 		
 		//MARK: Begin REST Request
-		RequestData().weatherData() { (weather_data) -> Void in
+		RequestData().BeginRequest() { (json_result) -> Void in
 			//swift async call
 			DispatchQueue.main.async() {
 				//parse JSON result
-				self._table_data = WeatherData.init(json: weather_data!)?.lvalues
+				self._table_data = WeatherData.init(json: json_result!)?.weather_info_list
 				self.tableView.reloadData()
-//				for pr in (self._table_data!){
-//					print(pr.pressure!)
-//				}
 			}
 		}
 		
@@ -74,9 +71,7 @@ class ResultsTableViewController: UITableViewController {
 
 		//Use NIB for custom cell
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomTableViewCell
-		cell.my_label.text = String(format: "%.2f", self._table_data![indexPath.row].pressure!)
-
-		//cell.descLabel.text = self._table_data![indexPath.row].temps?.day
+		cell.my_label.text = String(format: "%.2f", self._table_data![indexPath.row].temp_day!)
 		cell.descLabel.text = self._table_data![indexPath.row].weather_desc?.description!
 		cell.my_image.backgroundColor = UIColor.purple
 
