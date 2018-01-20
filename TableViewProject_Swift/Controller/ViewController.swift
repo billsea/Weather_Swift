@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
 	@IBOutlet weak var ShowTableButton: UIButton!
 	
@@ -17,7 +16,9 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
 	}
+	
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
 	@IBAction func ShowTable(_ sender: Any) {
 		let r = ResultsTableViewController()
 		show(r, sender: self)
+
 	}
 
 }

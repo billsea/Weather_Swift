@@ -94,6 +94,9 @@ class ResultsTableViewController: UITableViewController {
 		//...or Populate subviews after show detail is called(no delay)
 		//controller.selectedIndex.text = String(indexPath.row)
 		
+		//show alert with Objective-C utility
+		//utility.showAlert(withTitle: "hello", andMessage: "mess", andVC: self)
+		
 	}
 	
 }

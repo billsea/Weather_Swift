@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1535D326DD6C317D09FA067D /* Pods_TableViewProject_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C855FC18BC76D73A950603 /* Pods_TableViewProject_SwiftTests.framework */; };
 		359B8BACCBCEF4207E71CE3A /* Pods_TableViewProject_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA3835F25E4465A48483B8B /* Pods_TableViewProject_Swift.framework */; };
+		A93272FE20137D2C000D155B /* utility.mm in Sources */ = {isa = PBXBuildFile; fileRef = A93272FD20137D2B000D155B /* utility.mm */; };
 		A994F621200D5EBA007B7600 /* customCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A994F620200D5EBA007B7600 /* customCell.xib */; };
 		A9A8F3FF200E583900721133 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8F3FE200E583900721133 /* Weather.swift */; };
 		A9A8F401200E5A8900721133 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A8F400200E5A8900721133 /* Request.swift */; };
@@ -47,6 +48,9 @@
 		630E6D22C5BCCEC811CF5718 /* Pods-TableViewProject_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewProject_SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableViewProject_SwiftUITests/Pods-TableViewProject_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D9518C8933AF7DF6FAAC14A /* Pods-TableViewProject_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewProject_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableViewProject_SwiftUITests/Pods-TableViewProject_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		80B05469E8A856F844A8E553 /* Pods-TableViewProject_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewProject_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableViewProject_Swift/Pods-TableViewProject_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		A93272FC20137D2B000D155B /* TableViewProject_Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViewProject_Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		A93272FD20137D2B000D155B /* utility.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = utility.mm; sourceTree = "<group>"; };
+		A93272FF20137D50000D155B /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
 		A994F620200D5EBA007B7600 /* customCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customCell.xib; sourceTree = "<group>"; };
 		A9A8F3FE200E583900721133 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		A9A8F400200E5A8900721133 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
@@ -108,6 +112,16 @@
 				630E6D22C5BCCEC811CF5718 /* Pods-TableViewProject_SwiftUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A93272FA20137C45000D155B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A93272FF20137D50000D155B /* utility.h */,
+				A93272FD20137D2B000D155B /* utility.mm */,
+				A93272FC20137D2B000D155B /* TableViewProject_Swift-Bridging-Header.h */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A9A8F3FD200E582500721133 /* Model */ = {
@@ -177,11 +191,12 @@
 		A9E04BB6200819DA00B4A361 /* TableViewProject_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				A9A8F3FD200E582500721133 /* Model */,
 				A9CF68AB2010C75A005F5642 /* View */,
 				A9CF68AA2010C745005F5642 /* Controller */,
 				A9CF68A92010C727005F5642 /* UI */,
 				A9CF68A82010C711005F5642 /* Services */,
-				A9A8F3FD200E582500721133 /* Model */,
+				A93272FA20137C45000D155B /* Helper */,
 				A9E04BB7200819DA00B4A361 /* AppDelegate.swift */,
 				A9E04BBE200819DA00B4A361 /* Assets.xcassets */,
 				A9E04BC3200819DA00B4A361 /* Info.plist */,
@@ -294,6 +309,7 @@
 				TargetAttributes = {
 					A9E04BB3200819DA00B4A361 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					A9E04BC7200819DA00B4A361 = {
@@ -515,6 +531,7 @@
 				A9E04BBA200819DA00B4A361 /* ViewController.swift in Sources */,
 				A9E04BE620081A4800B4A361 /* TableViewController.swift in Sources */,
 				A9A8F401200E5A8900721133 /* Request.swift in Sources */,
+				A93272FE20137D2C000D155B /* utility.mm in Sources */,
 				A9E04BB8200819DA00B4A361 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +640,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Helper/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -672,6 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Helper/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -682,12 +701,15 @@
 			baseConfigurationReference = 80B05469E8A856F844A8E553 /* Pods-TableViewProject_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZGJ2UYWJY;
 				INFOPLIST_FILE = TableViewProject_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loudsoftware.TableViewProject-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper/TableViewProject_Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,12 +720,14 @@
 			baseConfigurationReference = 5A7D4D6401F001B42C0BBFB6 /* Pods-TableViewProject_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZGJ2UYWJY;
 				INFOPLIST_FILE = TableViewProject_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loudsoftware.TableViewProject-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
