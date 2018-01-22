@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+//MARK: Declare Protocol
+protocol update_delegate {
+	func name_update(label:String)
+}
 
 class DetailsViewController: UIViewController {
 	@IBOutlet weak var selectedIndex: UILabel!
@@ -43,6 +47,9 @@ class ResultsTableViewController: UITableViewController {
 	
 	//Declare callback closure (block style)
 	var callback: ((_ returnValue: Int) -> Void)?
+	
+	//declare test protocol (must be var)
+	var title_update: update_delegate!
 	
 	var _table_data:[ListValues]?
 	let cellIdentifier = "custom_cell"
@@ -114,6 +121,11 @@ class ResultsTableViewController: UITableViewController {
 		//callback to ViewController function
 		self.callback!(indexPath.row)
 		
+		//protocol
+		title_update.name_update(label: "my name")
+		
+		
 	}
+	
 	
 }

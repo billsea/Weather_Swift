@@ -8,9 +8,13 @@
 
 import UIKit
 
-
-
-class ViewControllerStart: UIViewController {
+class ViewControllerStart: UIViewController, update_delegate {
+	
+	//MARK: delegate methods
+	func name_update(label: String) {
+		print(label)
+	}
+	
 	@IBOutlet weak var ShowTableButton: UIButton!
 	
 	override func viewDidLoad() {
@@ -27,7 +31,7 @@ class ViewControllerStart: UIViewController {
 	//MARK: actions
 	@IBAction func ShowTable(_ sender: Any) {
 		let r = ResultsTableViewController()
-
+		r.title_update = self
 		//the callback function
 		r.callback = {(_ num: Int) -> Void in
 			//print selected row index from table view
