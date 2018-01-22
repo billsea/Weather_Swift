@@ -10,10 +10,8 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class ViewControllerStart: UIViewController {
 	@IBOutlet weak var ShowTableButton: UIButton!
-	
-
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,7 +19,6 @@ class ViewController: UIViewController {
 		
 	}
 	
-
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
@@ -37,8 +34,10 @@ class ViewController: UIViewController {
 			print(num)
 		
 		}
-		
-		show(r, sender: self)
+	
+		let nc = self.navigationController
+		nc?.pushViewController(r, animated: true)
+		//show(r, sender: self)
 
 	}
 

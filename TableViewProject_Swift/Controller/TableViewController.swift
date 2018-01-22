@@ -12,9 +12,17 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 	@IBOutlet weak var selectedIndex: UILabel!
+	var sel_index:String?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
+		
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		//set subview values
+		self.selectedIndex.text = "row:" + self.sel_index!
 	}
 	
 	override func didReceiveMemoryWarning() {
@@ -85,18 +93,17 @@ class ResultsTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let controller = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
-
-		//Can use:
-			//showDetailViewController(controller, sender: self)
-		//or..
-		self.present(controller, animated: true, completion: {
-			//populate as completion(slight delay)
-			controller.selectedIndex.text = String(indexPath.row)
-		})
+		let detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
+		detailsVC.sel_index = String(indexPath.row)
+		self.navigationController?.pushViewController(detailsVC, animated: true)
 		
-		//...or Populate subviews after show detail is called(no delay)
-		//controller.selectedIndex.text = String(indexPath.row)
+		//Can use:
+			//showDetailViewController(detailsVC, sender: self)
+		//or..
+//		self.present(detailsVC, animated: true, completion: {
+//			//populate as completion(slight delay)
+//			detailsVC.selectedIndex.text = String(indexPath.row)
+//		})
 		
 		
 		//Examples of calling Objective-C method and a Callback
