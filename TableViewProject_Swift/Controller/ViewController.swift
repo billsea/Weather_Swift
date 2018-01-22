@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 	@IBOutlet weak var ShowTableButton: UIButton!
 	
@@ -28,6 +30,14 @@ class ViewController: UIViewController {
 	//MARK: actions
 	@IBAction func ShowTable(_ sender: Any) {
 		let r = ResultsTableViewController()
+
+		//the callback function
+		r.callback = {(_ num: Int) -> Void in
+			//print selected row index from table view
+			print(num)
+		
+		}
+		
 		show(r, sender: self)
 
 	}

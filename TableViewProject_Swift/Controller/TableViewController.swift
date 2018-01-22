@@ -32,6 +32,10 @@ class CustomTableViewCell: UITableViewCell {
 }
 
 class ResultsTableViewController: UITableViewController {
+	
+	//Declare callback closure (block style)
+	var callback: ((_ returnValue: Int) -> Void)?
+	
 	var _table_data:[ListValues]?
 	let cellIdentifier = "custom_cell"
 	
@@ -94,8 +98,14 @@ class ResultsTableViewController: UITableViewController {
 		//...or Populate subviews after show detail is called(no delay)
 		//controller.selectedIndex.text = String(indexPath.row)
 		
+		
+		//Examples of calling Objective-C method and a Callback
+		
 		//show alert with Objective-C utility
 		//utility.showAlert(withTitle: "hello", andMessage: "mess", andVC: self)
+		
+		//callback to ViewController function
+		self.callback!(indexPath.row)
 		
 	}
 	

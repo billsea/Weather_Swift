@@ -114,12 +114,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A93272FA20137C45000D155B /* Helper */ = {
+		A93272FA20137C45000D155B /* Helper_ObjC */ = {
 			isa = PBXGroup;
 			children = (
 				A93272FF20137D50000D155B /* utility.h */,
 				A93272FD20137D2B000D155B /* utility.mm */,
 				A93272FC20137D2B000D155B /* TableViewProject_Swift-Bridging-Header.h */,
+			);
+			path = Helper_ObjC;
+			sourceTree = "<group>";
+		};
+		A99ACF0120160CC20086C933 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -196,7 +203,8 @@
 				A9CF68AA2010C745005F5642 /* Controller */,
 				A9CF68A92010C727005F5642 /* UI */,
 				A9CF68A82010C711005F5642 /* Services */,
-				A93272FA20137C45000D155B /* Helper */,
+				A99ACF0120160CC20086C933 /* Helper */,
+				A93272FA20137C45000D155B /* Helper_ObjC */,
 				A9E04BB7200819DA00B4A361 /* AppDelegate.swift */,
 				A9E04BBE200819DA00B4A361 /* Assets.xcassets */,
 				A9E04BC3200819DA00B4A361 /* Info.plist */,
@@ -640,7 +648,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Helper/TableViewProject_Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helper_ObjC/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -690,7 +698,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Helper/TableViewProject_Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helper_ObjC/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -708,7 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loudsoftware.TableViewProject-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper/TableViewProject_Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper_ObjC/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -727,7 +735,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.loudsoftware.TableViewProject-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper/TableViewProject_Swift-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableViewProject_Swift/Helper_ObjC/TableViewProject_Swift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
