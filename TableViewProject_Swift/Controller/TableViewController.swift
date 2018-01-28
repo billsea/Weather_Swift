@@ -45,7 +45,7 @@ class CustomTableViewCell: UITableViewCell {
 
 class ResultsTableViewController: UITableViewController {
 	
-	//Declare callback closure (block style)
+	//Declare callback closure (like obj-c block)
 	var callback: ((_ returnValue: Int) -> Void)?
 	
 	//declare test protocol (must be var)
@@ -65,7 +65,7 @@ class ResultsTableViewController: UITableViewController {
 		
 		//MARK: Begin REST Request
 		RequestData().BeginRequest() { (json_result) -> Void in
-			//swift async call
+			//Swift async call
 			DispatchQueue.main.async() {
 				//parse JSON result
 				self._table_data = WeatherData.init(json: json_result!)?.weather_info_list
