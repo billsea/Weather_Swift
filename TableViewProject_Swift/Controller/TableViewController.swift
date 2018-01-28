@@ -46,13 +46,19 @@ class CustomTableViewCell: UITableViewCell {
 class ResultsTableViewController: UITableViewController {
 	
 	//Declare callback closure (like obj-c block)
+	//Note: needs optional in declaration(?)
 	var callback: ((_ returnValue: Int) -> Void)?
+	
+	//Void callback with no parameters
+	var anotherCallback: (() -> ())?
 	
 	//declare test protocol (must be var)
 	var title_update: update_delegate!
 	
 	var _table_data:[ListValues]?
 	let cellIdentifier = "custom_cell"
+	
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -112,7 +118,6 @@ class ResultsTableViewController: UITableViewController {
 //			detailsVC.selectedIndex.text = String(indexPath.row)
 //		})
 		
-		
 		//Examples of calling Objective-C method and a Callback
 		
 		//show alert with Objective-C utility
@@ -120,6 +125,7 @@ class ResultsTableViewController: UITableViewController {
 		
 		//callback to ViewController function
 		self.callback!(indexPath.row)
+		self.anotherCallback!()
 		
 		//protocol
 		title_update.name_update(label: "my name")

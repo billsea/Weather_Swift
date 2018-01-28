@@ -92,11 +92,17 @@ class ViewControllerStart: UIViewController, update_delegate {
 			print(num)
 		
 		}
+		
+		// Don't need "() -> Void in" if no parameters and void
+		r.anotherCallback = {
+			print("do stuff callback")
+		}
 	
 		let nc = self.navigationController
 		nc?.pushViewController(r, animated: true)
 		//show(r, sender: self)
 
+		
 	}
 
 }
